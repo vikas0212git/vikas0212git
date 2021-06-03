@@ -13,6 +13,7 @@ stages:
       displayName: 'Run script'
 
 - stage: RasberryPi
+  dependsOn: []
   displayName: RasberryPi
   jobs:
   - job: RasberryPi
