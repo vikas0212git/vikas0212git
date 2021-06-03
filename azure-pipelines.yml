@@ -2,25 +2,24 @@ trigger:
 - master
 
 stages:
-  - stage: Ubuntu
-    displayName: Ubuntu
-    Jobs:
-    - Job: Ubuntu
-      pool:
-        name: IoT-Devices-E2E
-        
-      steps:
-      - script: echo "Running on Ubuntu"; uname -a
-        displayName: 'Run script'
+- stage: Ubuntu
+  displayName: Ubuntu
+  jobs:
+  - job: Ubuntu
+    pool:
+      name: IoT-Devices-E2E        
+    steps:
+    - script: echo "Running on Ubuntu"; uname -a
+      displayName: 'Run script'
 
-  - stage: RasberryPi
-    displayName: RasberryPi
-    Jobs:
-    - Job: RasberryPi
-      pool:
-        name: Raspberry-Pi
-        
-      steps:
-      - script: echo "Running on Raspberry-Pi"; uname -a
-        displayName: 'Run script'
+- stage: RasberryPi
+  displayName: RasberryPi
+  jobs:
+  - job: RasberryPi
+    pool:
+      name: Raspberry-Pi
+      
+    steps:
+    - script: echo "Running on Raspberry-Pi"; uname -a
+      displayName: 'Run script'
 
